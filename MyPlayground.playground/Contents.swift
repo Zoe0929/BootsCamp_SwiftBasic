@@ -33,5 +33,13 @@ enum SchoolDetail{
 }
 
 let yourMiddleSchoolName=SchoolDetail.middle(name: "목암중학교")
-print("yourMiddleSchoolName:\(SchoolDetail.getName())")
+//print("yourMiddleSchoolName:\(SchoolDetail.getName())")
 
+for u in 0...5 {
+    print(u)
+}//(0~5까지 반복하는 반복문, in range)
+for i in 0...5 where i % 2 == 0 {
+    print(i)
+}//(where은 조건문.)
+
+//0...5 -> 0이상 5이하, 0...<5 0이상 5미만(5 포함 X)
