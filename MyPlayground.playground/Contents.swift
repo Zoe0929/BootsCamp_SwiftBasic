@@ -60,3 +60,11 @@ for item in myArray where item%2==0{
 }
 
 
+var someVariable : Int?
+//값이 비어있는 상태. 옵셔널 변수 unwrapping
+
+if someVariable == nil {
+    someVariable=40
+} //nil==null
+
+
