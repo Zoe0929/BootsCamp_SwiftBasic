@@ -60,11 +60,42 @@ for item in myArray where item%2==0{
 }
 
 
-var someVariable : Int?
+var someVariable : Int? = nil
 //값이 비어있는 상태. 옵셔널 변수 unwrapping
+//옵셔널이란 ? 값의 유무를 알 수 없다.
 
 if someVariable == nil {
-    someVariable=40
+    someVariable=40 //옵셔널 상태이기 때문에 값을 넣어도 옵셔널이라고 포기됨 Optional(40)
 } //nil==null
 
+//언래핑이란? 감싸져있는 것을 벗기는 것-> 옵셔널 상태 해제.
 
+if let otherVariable = someVariable {
+    print("언래핑되었다. 값이 있다.")
+}
+else{
+    print("값이 없다.")
+}
+
+someVariable=nil
+//someVariable이 비어있으면, 기본값 설정 가능
+let myValue=someVariable ?? 10
+print("myValue:\(myValue)")
+
+
+var firstValue : Int? = 30
+var secondValue : Int? = 50
+//firstValue, secondValue 모두 언랩핑 상태
+
+print("firstValue:\(firstValue)")
+print("secondValue:\(secondValue)")
+
+unwrap(firstValue)
+unwrap(secondValue)
+
+func unwrap(_ parameter: Int?){
+    print("unwrap() called")
+    guard let unWrappedParam = parameter else{
+        return
+    }
+}
