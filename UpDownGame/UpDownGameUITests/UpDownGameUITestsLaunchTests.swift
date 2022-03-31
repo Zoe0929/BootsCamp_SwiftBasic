@@ -1,13 +1,13 @@
 //
-//  MyFirstAppUITestsLaunchTests.swift
-//  MyFirstAppUITests
+//  UpDownGameUITestsLaunchTests.swift
+//  UpDownGameUITests
 //
-//  Created by 지희의 MAC on 2022/03/28.
+//  Created by 지희의 MAC on 2022/03/31.
 //
 
 import XCTest
 
-class MyFirstAppUITestsLaunchTests: XCTestCase {
+class UpDownGameUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
