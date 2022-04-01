@@ -14,6 +14,7 @@ print("num1은 \(num1) 입니다.") //num1은 4입니다. 출력
 
 ### 3. enum
 - case에 접근
+- 상수를 열거형으로 사용하여 간편하게 
 
 ```   
 enum Grade : Int {
