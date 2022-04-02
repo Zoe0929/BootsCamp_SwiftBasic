@@ -59,3 +59,5 @@ print("값 변경 후: JeongDaeRiClone.name: \(JeongDaeRiClone.name)")
 
 
 //!struct는 값복사 class는 참조복사!
+
+
