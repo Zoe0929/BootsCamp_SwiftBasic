@@ -66,7 +66,7 @@ var guardJob: String
 guardJob = yagom?.home?.guard?.job ?? "슈퍼맨"
 print(guardJob)
                                 
-yagom?.home?.guard?.job = nil
+yagom!.home!.guard!.job = nil
                                 
 guardJob = yagom?.home?.guard?.job ?? "슈퍼맨"
 print(guardJob)
