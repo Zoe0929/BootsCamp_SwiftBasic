@@ -17,7 +17,7 @@ struct LandmarkList: View {
         }
     }
     var body: some View {
-        NavigationView{
+        NavigationStack{
             List {
                 Toggle(isOn: $showFavoritesOnly) {
                     Text("Favorites only")
