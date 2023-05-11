@@ -5,6 +5,7 @@
 //  Created by 지희의 MAC on 2023/03/22.
 //
 
+
 import Foundation
 import SwiftUI
 import CoreLocation
@@ -16,24 +17,32 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavorite: Bool
-    
-    
+    var isFeatured: Bool
+
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+
     private var imageName: String
-    var image: Image{
+    var image: Image {
         Image(imageName)
     }
-    
+    var featureImage: Image? {
+        isFeatured ? Image(imageName + "_feature") : nil
+    }
+
     private var coordinates: Coordinates
-    
-    var locationCoordinate: CLLocationCoordinate2D{
+    var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
     }
-    
-    struct Coordinates: Hashable, Codable{
+
+    struct Coordinates: Hashable, Codable {
         var latitude: Double
         var longitude: Double
     }
 }
-
